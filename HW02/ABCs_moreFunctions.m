@@ -16,19 +16,19 @@ function [A, B, C, D, E, F, G, H, I, J, K] = ABCs_moreFunctions(DNE)
 % true if they are valid, false otherwise.
 
 % function myFunc = [in1 in2]
-A = NaN;
+A = false;
 
 % function out = myFunc
-B = NaN;
+B = true;
 
 % function [out two three] = myFunc(in)
-C = NaN;
+C = true;
 
 % function myFunc
-D = NaN;
+D = true;
 
 % function (out, two) = myFunc[in]
-E = NaN;
+E = false;
 
 %--------------------------------------------------------------------------
 % Part II. Function Tracing
@@ -59,13 +59,13 @@ E = NaN;
 %   exist in the marathonRunner Workspace.
 
 % The value stored in 'pace' is:
-F = NaN;
+F = 3.9;
 
 % The value stored in 'left' is:
-G = NaN;
+G = 0.5;
 
 % The value stored in 'amount' is:
-H = NaN;
+H = 5;
 
 
 %   Consider the following function and its helper function. 
@@ -87,13 +87,13 @@ H = NaN;
 %   Write DNE if E is not defined in a particular Workspace.
 
 % The value of E in the Command Window workspace is:
-I = NaN;
+I = 5;
 
 % The value of E in the superFun function Workspace is:
-J = NaN;
+J = 0;
 
 % The value of E in the helper function Workspace is:
-K = NaN;
+K = 0;
 
 %-----------------------------------------------------------------------------------
 end
