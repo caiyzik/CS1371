@@ -65,7 +65,7 @@ F = 3.9;
 G = 0.5;
 
 % The value stored in 'amount' is:
-H = 5;
+H = DNE;
 
 
 %   Consider the following function and its helper function. 
@@ -93,7 +93,7 @@ I = 5;
 J = 0;
 
 % The value of E in the helper function Workspace is:
-K = 0;
+K = DNE;
 
 %-----------------------------------------------------------------------------------
 end

@@ -2,19 +2,11 @@
 % Name         : Tiffany Montgomery
 % T-square ID  : tmontgomery31
 % GT Email     : trmontgomery@gatech.edu
-% Homework     : HW02 original
+% Homework     : HW02 resubmission
 % Course       : CS1371
-% Section      : C
-% Collaboration: <place here one of the following:
-%                 "I worked on the homework assignment alone, using
-%                  only course materials."
-%                 OR
-%                 "I worked on this homework with <give the names of the
-%                  people you worked with>, used solutions or partial
-%                  solutions provided by <name the people or other
-%                  sources>, and referred to <cite any texts, web sites, or
-%                  other materials not provided as course materials for CS
-%                  1371.>"
+% Section      : D02
+% Collaboration:
+%                  "I worked on this homework resubmission on my own."
 %
 % Files to submit:
 %	ABCs_moreFunctions.m
@@ -87,58 +79,58 @@
 %
 % Test Cases:
 % [out1] = f(1)
-% 	out1 =>                      1.009
+isequal(f(1),1.009)
 % 
 % [out1] = f(10)
-% 	out1 =>                     2.9883
+isequal(f(10), 2.9883)
 % 
 % [out1] = f(100)
-% 	out1 =>                     5.8974
+isequal(f(100), 5.8974)
 %
 %--------------------------------------------------------------------------------
 %% Function Name: applesAndOranges
 %
 % Test Cases:
-% [out1, out2] = applesAndOranges(10, 10, 8, 8)
+ [out1, out2] = applesAndOranges(10, 10, 8, 8)
 % 	out1 =>     10
 % 	out2 =>     10
 % 
-% [out1, out2] = applesAndOranges(20, 30, 20, 22)
+ [out1, out2] = applesAndOranges(20, 30, 20, 22)
 % 	out1 =>      0
 % 	out2 =>     16
 % 
-% [out1, out2] = applesAndOranges(41, 10, 10, 10)
-% 	out1 =>                      60.78
+ [out1, out2] = applesAndOranges(41, 10, 10, 10)
+isequal(out1, 60.78)
 % 	out2 =>      0
 %
 %--------------------------------------------------------------------------------
 %% Function Name: fib
-%
+
 % Test Cases:
-% [out1] = fib(4)
+ [out1] = fib(4)
 % 	out1 =>      3
 % 
-% [out1] = fib(6)
+ [out1] = fib(6)
 % 	out1 =>      8
 % 
-% [out1] = fib(3)
+ [out1] = fib(3)
 % 	out1 =>      2
 %
 %--------------------------------------------------------------------------------
 %% Function Name: sepDigits
 %
 % Test Cases:
-% [out1, out2, out3] = sepDigits(100)
+ [out1, out2, out3] = sepDigits(100)
 % 	out1 =>      1
 % 	out2 =>      0
 % 	out3 =>      0
 % 
-% [out1, out2, out3] = sepDigits(101)
+ [out1, out2, out3] = sepDigits(101)
 % 	out1 =>      1
 % 	out2 =>      0
 % 	out3 =>      1
 % 
-% [out1, out2, out3] = sepDigits(394)
+ [out1, out2, out3] = sepDigits(394)
 % 	out1 =>      3
 % 	out2 =>      9
 % 	out3 =>      4
