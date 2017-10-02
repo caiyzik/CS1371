@@ -1,31 +1,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Name         : <your name>
-% T-square ID  : <your t-square ID. Example: gburdell3>
-% GT Email     : <your GT email address>
-% Homework     : <homework assignment number/original or resubmission>
+% Name         : Tiffany Montgomery
+% T-square ID  : tmontgomery31
+% GT Email     : tmontgomery31@gatech.edu
+% Homework     : HW05 Original 
 % Course       : CS1371
-% Section      : <Your Section>
-% Collaboration: <place here one of the following:
+% Section      : D02
+% Collaboration: 
 %                 "I worked on the homework assignment alone, using
 %                  only course materials."
-%                 OR
-%                 "I worked on this homework with <give the names of the
-%                  people you worked with>, used solutions or partial
-%                  solutions provided by <name the people or other
-%                  sources>, and referred to <cite any texts, web sites, or
-%                  other materials not provided as course materials for CS
-%                  1371.>"
+%                
 %
 % Files to submit:
-%	ABCs_arrays.m
-%	ABCs_masking.m
-%	castCharm.m
-%	hippogriffCase.m
+%	ABCs_arrays.m     %
+%	ABCs_masking.m    %
+%	castCharm.m       %
+%	hippogriffCase.m  
 %	hw05.m
 %	puzzleBox.m
-%	quibbler.m
-%	sortingSquare.m
-%	spellCheck.m
+%	quibbler.m        %
+%	sortingSquare.m   %
+%	spellCheck.m      %
 %
 % Instructions:
 %   1) Follow the directions for each problem very carefully or you will
@@ -89,16 +83,19 @@
 %
 % Test Cases:
 % [out1] = castCharm([1, 3; 2 1], [7, 8; 2, 6], 1)
+%isequal(castCharm([1, 3; 2 1], [7, 8; 2, 6], 1), castCharm_soln([1, 3; 2 1], [7, 8; 2, 6], 1))
 % 	out1 =>  
 %     13     3
 %      2    13
 % 
 % [out2] = castCharm([3, 3, 5; 3, 0, 3], [0, 0, 0; 0, 0, 0], 3)
+%isequal(castCharm([3, 3, 5; 3, 0, 3], [0, 0, 0; 0, 0, 0], 3), castCharm_soln([3, 3, 5; 3, 0, 3], [0, 0, 0; 0, 0, 0], 3))
 % 	out2 =>  
 %      0     0     5
 %      0     0     0
 % 
 % [out3] = castCharm([10, 11; 45, 10; 12, 0], [7, 6; 8, 10; 3, 5], 4)
+%isequal(castCharm([10, 11; 45, 10; 12, 0], [7, 6; 8, 10; 3, 5], 4), castCharm_soln([10, 11; 45, 10; 12, 0], [7, 6; 8, 10; 3, 5], 4))
 % 	out3 =>  
 %     10    11
 %     45    10
@@ -109,15 +106,17 @@
 %
 % Setup:
 %	load puzzles.mat
-%
+load('puzzles.mat')
 % Test Cases:
 % [out1] = quibbler('owl', puzzle1)
+%isequal(quibbler('owl', puzzle1), quibbler_soln('owl', puzzle1))
 % 	out1 =>  
 % a#x
 % b#y
 % c#z
 % 
 % [out2] = quibbler('ron', puzzle2)
+%isequal(quibbler('ron', puzzle2), quibbler_soln('ron', puzzle2))
 % 	out2 =>  
 % bnkd
 % mncp
@@ -125,6 +124,7 @@
 % pzas
 % 
 % [out3] = quibbler('harry', puzzle3)
+%isequal(quibbler('harry', puzzle3), quibbler_soln('harry', puzzle3))
 % 	out3 =>  
 % nmhzy
 % plauq
@@ -137,16 +137,18 @@
 %
 % Setup:
 %	load studentTest.mat
-%
+load('studentTest.mat')
 % Test Cases:
 % [new1] = sortingSquare(students1, 1)
+%isequal(sortingSquare(students1, 1), sortingSquare(students1, 1))
 % 	new1 =>  
 %      1     5     9    14
 %      2     6    10    15
 %      3     7    11    16
 %      4     8    12    -1
 % 
-% [new2] = sortingSquare(students2, 3)
+%[new2] = sortingSquare(students2, 3)
+%isequal(sortingSquare(students2, 3), sortingSquare(students2, 3))
 % 	new2 =>  
 %      1     6    14    25    -1
 %      2     7    15    -1    -1
@@ -155,6 +157,7 @@
 %      5    10    24    -1    -1
 % 
 % [new3] = sortingSquare(students3, 6)
+%isequal(sortingSquare(students3, 6), sortingSquare(students3, 6))
 % 	new3 =>  
 %     -1    -1    -1    -1    -1    -1
 %     -1    -1    -1    -1    -1    -1
@@ -164,6 +167,7 @@
 %     -1    -1    -1    -1    -1    -1
 % 
 % [new4] = sortingSquare(students4, 0)
+%isequal(sortingSquare(students4, 0), sortingSquare(students4, 0))
 % 	new4 =>  
 %      1     8    15    22    29    36    43
 %      2     9    16    23    30    37    44
@@ -178,14 +182,25 @@
 %
 % Test Cases:
 % [out1] = spellCheck(['QCDN'; 'FLKI'; 'JHGM'; 'EOPB'])
+%isequal(spellCheck(['QCDN'; 'FLKI'; 'JHGM'; 'EOPB']), spellCheck_soln(['QCDN'; 'FLKI'; 'JHGM'; 'EOPB']))
 % 	out1 =>    1
 % 
 % [out1] = spellCheck(['RTE','AQO','MNP','DSX'])
+%isequal(spellCheck(['RTE','AQO','MNP','DSX']), spellCheck_soln(['RTE','AQO','MNP','DSX']))
 % 	out1 =>    0
 % 
 % [out1] = spellCheck('A')
+%isequal(spellCheck('A'), spellCheck_soln('A'))
 % 	out1 =>    1
 %
+
+%%TESTING WITH RUBRIC
+load('spellCheck_rubrica.mat')
+a = isequal(spellCheck(in1), spellCheck_soln(in1))
+b = isequal(spellCheck(in2), spellCheck_soln(in2))
+in3
+c = spellCheck(in3)
+d = spellCheck_soln(in3)
 %--------------------------------------------------------------------------------
 %% Function Name: hippogriffCase
 %
@@ -193,11 +208,11 @@
 % [str1] = hippogriffCase('I can''t believe you make me deal with this 1 hippogriff!!')
 % 	str1 => With This  HippogriffI Cant Believe You Make Me Deal 
 % 
-% [str2] = hippogriffCase('  Buckbeak the the HIPPOGRIFF is being terribly annoying!!  ')
+%[str2] = hippogriffCase('  Buckbeak the the HIPPOGRIFF is being terribly annoying!!  ')
 % 	str2 => The The Hippogriff Is Being Terribly Annoying    Buckbeak 
 % 
-% [str3] = hippogriffCase('I study Hippogriffs  &  I absolutlely LOVE HIppogriffs!!')
-% 	str3 => Absolutlely Love HippogriffsI Study Hippogriffs    I 
+% [str3] = hippogriffCase('Draco HATES Hippogriffs  & he would absolutlely LOVE to start an ant-HIppogriff society!!')
+% 	str3 => Start An Anthippogriff SocietyDraco Hates Hippogriffs   He Would Absolutlely Love To 
 %
 %--------------------------------------------------------------------------------
 %% Function Name: puzzleBox

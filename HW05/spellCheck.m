@@ -3,6 +3,12 @@ function [magic_square] = spellCheck(chars)
 [r, c] = size(chars);
 test1 = r == c;
 
+%check for uniqueness
+testChars = double(sort(chars(:)'));
+testChars(1:2:end) = testChars(1:2:end) .* -1;
+a = cumsum(testChars);
+test3 = any(a == 0);
+
 %convert to numbers
 nums = double(chars);
 
@@ -25,5 +31,5 @@ diag_sum2 = sum(min_diag);
 
 test2 = isequal(diag_sum1,diag_sum2,col_sum(1),row_sum(1));
 
-magic_square = test1 & test2;
+magic_square = test1 & test2 & ~test3;
 end
