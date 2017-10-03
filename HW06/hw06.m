@@ -19,8 +19,8 @@
 % Files to submit:
 %	ABCs_conditionals.m  %
 %	earthWindFire.m      %
-%	findMyJam.m
-%	highSchoolMusical.m
+%	findMyJam.m          %
+%	highSchoolMusical.m  %
 %	hw06.m
 %	musicalYahtzee.m
 %	wakeMeUp.m           %
@@ -145,20 +145,20 @@ load('jamCases.mat')
 % spotify1
 % stats1
 % Test Cases:
- [decision1] = findMyJam(options1, friends1, spotify1, stats1)
-%isequal(findMyJam(options1, friends1, spotify1, stats1), findMyJam_soln(options1, friends1, spotify1, stats1))
+% [decision1] = findMyJam(options1, friends1, spotify1, stats1)
+isequal(findMyJam(options1, friends1, spotify1, stats1), findMyJam_soln(options1, friends1, spotify1, stats1))
 % 	decision1 => Radiohead will ignite the party!
 % 
- [decision2] = findMyJam(options2, friends2, spotify2, stats2)
-%isequal(findMyJam(options2, friends2, spotify2, stats2), findMyJam_soln(options2, friends2, spotify2, stats2))
+% [decision2] = findMyJam(options2, friends2, spotify2, stats2)
+isequal(findMyJam(options2, friends2, spotify2, stats2), findMyJam_soln(options2, friends2, spotify2, stats2))
 % 	decision2 => Kanye West will ignite the party!
 % 
- [decision3] = findMyJam(options3, friends3, spotify3, stats3)
-%isequal(findMyJam(options3, friends3, spotify3, stats3), findMyJam_soln(options3, friends3, spotify3, stats3))
+% [decision3] = findMyJam(options3, friends3, spotify3, stats3)
+isequal(findMyJam(options3, friends3, spotify3, stats3), findMyJam_soln(options3, friends3, spotify3, stats3))
 % 	decision3 => Drake will ignite the party!
 % 
- [decision4] = findMyJam(options4, friends4, spotify4, stats4)
-%isequal(findMyJam(options4, friends4, spotify4, stats4), findMyJam_soln(options4, friends4, spotify4, stats4))
+% [decision4] = findMyJam(options4, friends4, spotify4, stats4)
+isequal(findMyJam(options4, friends4, spotify4, stats4), findMyJam_soln(options4, friends4, spotify4, stats4))
 % 	decision4 => Phoenix will ignite the party!
 %
 %--------------------------------------------------------------------------------
