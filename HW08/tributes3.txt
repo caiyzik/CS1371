@@ -1,0 +1,11 @@
+Susan:0.2,0,0,1.1,2
+Kal:7,8,8,8,3.32,1
+EMily:9.23,2,1,9
+the Girl on FIRE:5,4,3.31,9,4,3
+Lavish:10,8,7.4,8,10
+Harry Potter:8,2,8.1,8,10,10
+Voldemort:9,9,10,9.1,1,1,2.22
+Edward Elric:10,6.1,5,3.91
+Percy Jackson:9,6,6,6.2
+Gandolf:4,7,7,7.32,8.2
+Frank Sinatra:10,9,8,7.98,7,6

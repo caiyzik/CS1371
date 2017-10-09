@@ -1,0 +1,7 @@
+Zachniss:0,0,0,1
+Tim:7,8,8,8
+Natasha:9,9,9,9
+Victoria:10,8,7,8
+Addison:8,7,8,8
+Lobo:9,9,10,9
+Katniss:5,4,3,2
