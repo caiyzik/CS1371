@@ -15,26 +15,18 @@ while ~isempty(player1) & ~isempty(player2)
         match = find(player2 == player1(1));
     end
     if ~isempty(match)
-        player1(1) = []; %if player does have first card: remove from both hands and add a point
+        %if player does have first card: remove from both hands and add a point
+        player1 = [player1(2:end) player1(1) player2(match)];
         player2(match) = [];
-        score_1 = score_1 + 1;
     else
     %if player doesn't have first card: take first card from deck and append to end of hand
-        if ~isempty(player1)
-            match = find(player1 == deck(1));
-        end
-        if ~isempty(match) %check to see if there is a pair: if so add a point (and remove the pair?)
-            score_1 = score_1 + 1;
-            player1(match) = [];
-            deck(1) = [];
-            player2 = [player2(2:end) player2(1)];
-        else
-            player1 = [player1 deck(1)];
-            deck(1) = [];
-            player2 = [player2(2:end) player2(1)];
-        end
+        player1 = [player1(2:end) deck(1) player1(1)];
+        deck(1) = [];
+    
     end
     
+   [player1, add_score] = remRepeats(player1);
+    score_1 = score_1 + add_score;
     %switch players/turns ("exchange" cards and scores)
     a = player1;
     b = player2;
@@ -55,21 +47,21 @@ end
     if orig_hand
     %player1 is player1 and player2 is player 2
         if score_1 > score_2
-            statement = sprintf('Player1 wins');
+            statement = sprintf('Player 1 won!');
         elseif score_2 > score_1
-            statement = sprintf('Player2 wins');
+            statement = sprintf('Player 2 won!');
         else
-            statement = sprintf('Its a tie');
+            statement = sprintf('It''s a tie!');
         end
         score = [score_1 score_2];
     else
     %player 2 is player 1 and player 1 is player 2
         if score_1 > score_2
-            statement = sprintf('Player2 wins');
+            statement = sprintf('Player 2 won!');
         elseif score_2 > score_1
-            statement = sprintf('Player1 wins');
+            statement = sprintf('Player 1 won!');
         else
-            statement = sprintf('Its a tie');
+            statement = sprintf('It''s a tie!');
         end
         score = [score_2 score_1];
     end
