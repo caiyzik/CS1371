@@ -1,0 +1,7 @@
+%%%%%%%%%PLOTTING%%%%%%%%%%%%%
+plot(x,y)
+title('string')
+xlabel(), ylabel()
+
+subplot(width, height, label?) - defines a grid of plots. Lets you have 
+multiple plots in one window

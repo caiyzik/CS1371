@@ -1,0 +1,11 @@
+Notes and interesting things
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Structures%%
+
+fieldnames()
+get/setfield()
+rmfield()
+to remove an element its the same as removing something from a regular array
+a structure array is an array of elements of structs with the SAME field names
+

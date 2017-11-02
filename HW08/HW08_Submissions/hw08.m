@@ -20,7 +20,7 @@
 %	ABCs_lowLevelFileIO.m    %
 %	bookmateMatch.m          % 
 %	drSeuss.m                %
-%	greatGatsby.m            %
+%	greatGatsby.m            
 %	hungerGames.m            %
 %	hw08.m                   %
 %	library.m                %
@@ -101,13 +101,8 @@
 %--------------------------------------------------------------------------------
 %% Function Name: library
 %
-
-% library('Goodnight Moon', 3, 2);
-% library_soln('Goodnight Moon', 3, 2);
-% 
-% visdiff('goodnight.txt', 'goodnight_soln.txt')
 % Test Cases:
-% 
+% library('Goodnight Moon', 3, 2)
 % 		Output text file(s) should be identical to that produced by the solution file
 % 
 % library('Chronicles of Narnia', 4, 1)
@@ -120,29 +115,30 @@
 %% Function Name: magicTreehouse
 %
 % Test Cases:
- %[count1] = magicTreehouse('shortTest.txt', 'this', 'is')
+% [count1] = magicTreehouse('shortTest.txt', 'this', 'is')
 % 	count1 =>      2     2
 % 
- %[count2] = magicTreehouse('mediumTest.txt', 'Fox', 'ugly')
+% [count2] = magicTreehouse('mediumTest.txt', 'Fox', 'ugly')
 % 	count2 =>      3     2
 % 
- %[count3] = magicTreehouse('longTest.txt', 'Magic', 'and')
+% [count3] = magicTreehouse('longTest.txt', 'Magic', 'and')
 % 	count3 =>      2    12
 %
 %--------------------------------------------------------------------------------
 %% Function Name: bookmateMatch
 %
 % Test Cases:
-% [out1] = bookmateMatch('BH.txt', 'CS.txt')
-%isequal(bookmateMatch('BH.txt', 'CS.txt'), bookmateMatch_soln('BH.txt', 'CS.txt'))
+% [out1] = bookmateMatch('CS.txt', 'MM.txt')
+%isequal(bookmateMatch('CS.txt', 'MM.txt'), bookmateMatch_soln('CS.txt','MM.txt'))
 % 	out1 => Bob Henderson and Cindy Silverman have a 32% bookmate compatibility score.
 % 
-% [out1] = bookmateMatch('BH.txt', 'JB.txt')
-%isequal(bookmateMatch('BH.txt', 'JB.txt'), bookmateMatch_soln('BH.txt', 'JB.txt'))
+% [out1] = bookmateMatch('SW.txt', 'CS.txt')
+%isequal(bookmateMatch('CS.txt', 'SW.txt'), bookmateMatch_soln('CS.txt', 'SW.txt'))
 % 	out1 => Bob Henderson and Jeremy Bones have a 70% bookmate compatibility score.
 % 
-% [out1] = bookmateMatch('CS.txt', 'JB.txt')
-%isequal(bookmateMatch('CS.txt', 'JB.txt'), bookmateMatch_soln('CS.txt', 'JB.txt'))
+ [out1] = bookmateMatch('CS.txt', 'MS.txt')
+%isequal(bookmateMatch('CS.txt', 'MS.txt'), 
+bookmateMatch_soln('CS.txt', 'MS.txt')
 % 	out1 => Cindy Silverman and Jeremy Bones have a 32% bookmate compatibility score.
 %
 %--------------------------------------------------------------------------------
@@ -166,25 +162,14 @@
 %
 % Test Cases:
 % greatGatsby('Roarin20s_guests.txt', 'Roarin20s_arrived.txt', 10)
-% greatGatsby_soln('Roarin20s_guests.txt', 'Roarin20s_arrived.txt', 10)
-% greatGatsby('soundtrack_guests.txt', 'soundtrack_arrived.txt', 11)
-% greatGatsby_soln('soundtrack_guests.txt', 'soundtrack_arrived.txt', 11)
-% greatGatsby('underTheSea_guests.txt', 'underTheSea_arrived.txt', 10)
-% greatGatsby_soln('underTheSea_guests.txt', 'underTheSea_arrived.txt', 10)
-% % % 		Output text file(s) should be identical to that produced by the solution file
-% % % 
-
-% % 		Output text file(s) should be identical to that produced by the solution file
-% % 
+% 		Output text file(s) should be identical to that produced by the solution file
 % 
-
+% greatGatsby('soundtrack_guests.txt', 'soundtrack_arrived.txt', 11)
+% 		Output text file(s) should be identical to that produced by the solution file
+% 
 % greatGatsby('underTheSea_guests.txt', 'underTheSea_arrived.txt', 10)
 % 		Output text file(s) should be identical to that produced by the solution file
 %
-
-visdiff('Roarin20s_attended.txt', 'Roarin20s_attended_soln.txt')
-visdiff('soundtrack_attended.txt', 'soundtrack_attended_soln.txt')
-visdiff('underTheSea_attended.txt', 'underTheSea_attended_soln.txt')
 %--------------------------------------------------------------------------------
 %% Function Name: shakespeare
 %

@@ -1,6 +1,7 @@
 % DO NOT CHANGE THIS LINE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [A, B, C, D, E, F, G, H, I, J] = ABCs_lowLevelFileIO(file1, file2, file3)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%CORRECT%%%%
 
 % ABCs: Lower-Level File I/O
 %
@@ -23,7 +24,7 @@ function [A, B, C, D, E, F, G, H, I, J] = ABCs_lowLevelFileIO(file1, file2, file
 %% Part I: Short Coding & Conceptual
 % 1. fopen(). Open file1 for read access and store the file handle in (fh1)
 
-fh1 = fopen(file1, 'r');
+fh1 = fopen(file1);
 
 % 2. fgets(). Read in the first line of file1 using fgets(). (A)
 A = fgets(fh1);
@@ -106,7 +107,8 @@ I = 2;
 
 % function [J] = secretMessage(file3)
 % 1. Start by opening file3 and storing the file handle in (fh).
-fh = fopen(file3, 'w');
+fh = fopen(file3); %when you open a txt file with write permissions it erases everything
+%does the same thing happen with xls files?
 
 % 2. Get the first two lines of the file using fgetl() and store them in 
 %    (line1 and line2)
@@ -118,14 +120,14 @@ line2 = fgetl(fh);
 %    'CS1371'. If this condition is met, set the output (J) to 
 %    'Can''t chat, learning MATLAB!'. (Do not end your if statement yet).
 if strcmp(line1, 'CS1371')
-    J = 'Can''t chat, learning MATLAB!';
+    J = 'Can''t chat, learning MATLAB!'
 
 % 4. Write an else condition for when the first line is anything else.
 %    Inside this else statement, obtain the third line of the file and
 %    store it in (line). Also, initialize (J) by setting it equal to [].
 else
     line = fgets(fh);
-    J = [];
+    J = []
     
 % 5. Then, write a while loop for when "line" is of type char. 
 %    Inside the while loop, concatenate the first letter of "line" 
@@ -137,7 +139,7 @@ else
             break;
         end
         line = fgets(fh);
-        J = [line(1) J];
+        J = [line(1) J]
      end
  end
 

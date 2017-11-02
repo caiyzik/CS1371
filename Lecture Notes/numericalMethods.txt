@@ -1,0 +1,69 @@
+Numerical Methods Notes
+
+%%%%%%Interpolation and Extrapolation%%%%%%%%%%
+interpolation - guess y values within the domain of a data set
+interp1(x,y,newxValues) - linear interpolation
+- connects the the two closet points with a 
+straight line and takes a point from that line
+
+spline() -- spline interpolation
+- connects the dots with curves
+
+You can use these same functions for 
+extrapolation
+interp1 will produce NaN if you don't tell it to
+ extrapolate. Interpolation will work fine. You 
+can do both at the same time. 
+
+interp1(x,y,newx, ('linear', 'cubic', 'spline'),
+'extrap')
+
+spline automatically does both for you
+
+%%%%%%%%%%%Curve Fitting%%%%%%%%%%%%
+- Line of Best Fit - guaranteed to pass through
+each point
+- polyfit(x,y, order) order of the polynomial
+--- outputs a coeff vector: order+1 elements
+- polyval(coeff, xvals)
+--- outputs yvals
+
+Highest Order Unique Best Fit Polynomial
+- highest order polynomial that is unique to your
+data (guaranteed to go through each point)
+Ex: Two point data set. There are infinite 3rd
+and 2nd order polynomials that can fit it but 
+only a first order will be unique
+- this varies on the number of points:
+--- highest order unique = num_points - 1
+
+
+%%%%%%%%%%%%%%%Calculus%%%%%%%%%%%%%%%%%%%%
+******numerical deriviative: slope through pairs of points
+- diff(y)./diff(x) <-- numerical derivitives
+- diff gives you one less number than you started 
+--  with
+-- to do a second or thrid (so on) derivitave you 
+need to disregard the first or last x value
+
+******analytical derivative: 
+-gives you the coeff of the derivitative of a 
+polynomial
+
+coeffs = [2 4 5]
+pow = length(coeffs)-1: -1: 0
+newcoeffs = coeffs .* pow
+newcoeffs(end) = []
+
+******numerical integrals
+cumsum(vec) - uses riemann sums to calc the area
+cumtrapz(x,y) - uses trapezoidal sums (more accurate than riemann)
+trapz() - gives you the full area of the curve (just one values)
+
+*******analytical integral
+coeff = [2, 4, 5]
+pow = length(coeff): -1:1
+newcoeff = coeff./pow
+newcoeff = [newcoeffs C] C is whatever the constant is
+
+

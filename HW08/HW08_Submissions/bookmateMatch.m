@@ -1,4 +1,6 @@
 function [sentence] = bookmateMatch(first_file, second_file)
+    %%%%CORRECT%%%%
+
     %open files
     first = fopen(first_file);
     second = fopen(second_file);
@@ -39,7 +41,7 @@ function [sentence] = bookmateMatch(first_file, second_file)
     %[timeB, halfB] = strtok(timeB, ' ');
        
     %calc score1
-    score1 = round((1 - (timeDiff(timeA(2:end), timeB(2:end))./ 12)).*20);
+    score1 = round((1 - timeDiff(timeA(2:end), timeB(2:end))./ 12).*20);
     
     %"Stay up late" Compatiblity
     
@@ -71,7 +73,7 @@ function [sentence] = bookmateMatch(first_file, second_file)
     %calc
     if isequal(lateA, lateB)
         score2 = 20;
-    elseif diff(lateA, lateB) == 1
+    elseif abs(lateA - lateB) == 1
         score2 = 10;
     else
         score2 = 0;
@@ -82,17 +84,19 @@ function [sentence] = bookmateMatch(first_file, second_file)
     %get all the lines from the rest of the texts
     line = '';
     linesA = '';
-    while ischar(line)
-        line = fgetl(first);
+    while ischar(line) 
+        %The problem: when the below two lines are reversed it will
+        %concatenate a -1 onto the line. 
         linesA = [linesA line];
+        line = fgetl(first);
     end
     linesA = strtrim(linesA);
     
     line = '';
     linesB = '';
     while ischar(line)
-        line = fgetl(second);
         linesB = [linesB line];
+        line = fgetl(second);
     end
     linesB = strtrim(linesB);
     
@@ -101,10 +105,12 @@ function [sentence] = bookmateMatch(first_file, second_file)
     smaller = min(length(linesA), length(linesB));
     larger = max(length(linesA), length(linesB));
     
-    score3 = round((smaller./larger).*20);
+    score3 = (smaller./larger).*20;
+    score3 = round(score3);
     
     %calculate FINAL score
-    compat = round(((score1 + score2 + score3)./ 60).*100);
-    sentence = sprintf('%s and%s have a %0.0d%% bookmate compatibility score.', name1, name2, compat);
+    compat = ((score1 + score2 + score3)./ 60).*100;
+    compat = round(compat);
+    sentence = sprintf('%s and%s have a %d%% bookmate compatibility score.', name1, name2, compat);
     sentence = strtrim(sentence);
 end
