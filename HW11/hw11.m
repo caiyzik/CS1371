@@ -127,7 +127,7 @@
 %% Function Name: timeTravel
 %
 % Setup:
-load('timeTravelCases.mat')
+%load('timeTravelCases.mat')
 %
 % Test Cases:
 % isequal(timeTravel('Jiffy', arr1, 1960), timeTravel_soln('Jiffy', arr1, 1960))
@@ -149,7 +149,7 @@ load('timeTravelCases.mat')
 %% Function Name: area51
 %
 % Setup:
-load('area51cases.mat')
+%load('area51cases.mat')
 % %
 % subplot(3,2,[1:3])
 % % Test Cases:
@@ -188,10 +188,12 @@ load('area51cases.mat')
 load('cropPolygonTest.mat')
 %
 % Test Cases:
-subplot(2,1,1)
-cropPolygon(lengths1, angles1)
-subplot(2,1,2)
-cropPolygon_soln(lengths1, angles1)
+% subplot(2,1,1)
+ cropPolygon(lengths1, angles1)
+%cropPolygon(ones(1,6)*8, ones(1,6)*60)
+%subplot(2,1,2)
+%cropPolygon_soln(lengths1, angles1)
+axis('equal')
 % 		Output plot(s) should be identical to that produced by solution file
 % 
 % cropPolygon(lengths2, angles2)
