@@ -188,9 +188,9 @@
 load('cropPolygonTest.mat')
 %
 %checkPlots('cropPolygon', lengths1, angles1)
- %checkPlots('cropPolygon', lengths2, angles2)
+%checkPlots('cropPolygon', lengths2, angles2)
 %checkPlots('cropPolygon', lengths3, angles3)
- checkPlots('cropPolygon', lengths4, angles4)
+%checkPlots('cropPolygon', lengths4, angles4)
 % % Test Cases:
 % subplot(2,4,1)
 % cropPolygon(lengths1, angles1)
@@ -212,10 +212,10 @@ load('cropPolygonTest.mat')
 %  cropPolygon_soln(lengths3, angles3)
 % % 		Output plot(s) should be identical to that produced by solution file
 % % 
-% subplot(2,1,1)
-% cropPolygon(lengths3, angles3)
-% subplot(2,1,2)
-% cropPolygon_soln(lengths3, angles3)
+ subplot(2,1,1)
+ cropPolygon(lengths3, angles3)
+ subplot(2,1,2)
+ cropPolygon_soln(lengths3, angles3)
 % % 		Output plot(s) should be identical to that produced by solution file
 % %
 %--------------------------------------------------------------------------------

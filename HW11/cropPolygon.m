@@ -26,11 +26,13 @@ function cropPolygon(lengths, angles)
             len = len + lengths(ndx+1);
         end
     end
-   
-    x_vec = [x_vec x_vec(1)] 
-    y_vec = [y_vec y_vec(1)]
-    plot(cumsum(x_vec), cumsum(y_vec), 'k-')
+    lastx = x_vec(1);
+    lasty = y_vec(1);
+    x_vec = [cumsum(x_vec)];%x_vec(1)]; 
+    y_vec = [cumsum(y_vec)];%y_vec(1)];
+    plot([0 x_vec], [0 y_vec], 'k-')
     hold on
 
     axis('equal')
+    axis('off')
 end
