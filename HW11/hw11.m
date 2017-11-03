@@ -188,21 +188,30 @@
 load('cropPolygonTest.mat')
 %
 % Test Cases:
-% subplot(2,1,1)
- cropPolygon(lengths1, angles1)
+subplot(2,4,1)
+cropPolygon(lengths1, angles1)
 %cropPolygon(ones(1,6)*8, ones(1,6)*60)
-%subplot(2,1,2)
-%cropPolygon_soln(lengths1, angles1)
-axis('equal')
+subplot(2,4,5)
+cropPolygon_soln(lengths1, angles1)
+
 % 		Output plot(s) should be identical to that produced by solution file
 % 
-% cropPolygon(lengths2, angles2)
+subplot(2,4,2)
+cropPolygon(lengths2, angles2)
+subplot(2,4,6)
+cropPolygon_soln(lengths2, angles2)
 % 		Output plot(s) should be identical to that produced by solution file
 % 
-% cropPolygon(lengths3, angles3)
+subplot(2,4,3)
+cropPolygon(lengths3, angles3)
+subplot(2,4,7)
+cropPolygon_soln(lengths3, angles3)
 % 		Output plot(s) should be identical to that produced by solution file
 % 
-% cropPolygon(lengths4, angles4)
+subplot(2,4,4)
+cropPolygon(lengths4, angles4)
+subplot(2,4,8)
+cropPolygon_soln(lengths4, angles4)
 % 		Output plot(s) should be identical to that produced by solution file
 %
 %--------------------------------------------------------------------------------
