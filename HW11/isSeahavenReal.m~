@@ -10,14 +10,6 @@ function [coeff] = isSeahavenReal(data, colors)
     fx = polyval(coeff, x);
     epsilon = 0.00001;
     score = sum(abs(y - fx));
-    color_count = 1;
-    
-    %find diameter
-    diameter = diff(max(x), min(x));
-    %find domain
-    buffer = diameter*.05;
-    newx = linspace(-buffer, buffer, 1000);
-    
     while score > epsilon
         order = order + 1;
         coeff = polyfit(x, y, order);
@@ -25,6 +17,6 @@ function [coeff] = isSeahavenReal(data, colors)
         score = sum(abs(y - fx));
     end
     
-    
+    %diameter = dif
     
 end

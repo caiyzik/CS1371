@@ -185,12 +185,12 @@
 %% Function Name: cropPolygon
 %
 % Setup:
-load('cropPolygonTest.mat')
+%load('cropPolygonTest.mat')
 %
 %checkPlots('cropPolygon', lengths1, angles1)
  %checkPlots('cropPolygon', lengths2, angles2)
 %checkPlots('cropPolygon', lengths3, angles3)
- checkPlots('cropPolygon', lengths4, angles4)
+%checkPlots('cropPolygon', lengths4, angles4)
 % % Test Cases:
 % subplot(2,4,1)
 % cropPolygon(lengths1, angles1)
@@ -222,10 +222,15 @@ load('cropPolygonTest.mat')
 %% Function Name: isSeahavenReal
 %
 % Setup:
-%	load seahavenTestCases.mat
+load('seahavenTestCases.mat')
 %
+isequal(isSeahavenReal(data1, colors1), isSeahavenReal_soln(data1, colors1))
+isequal(isSeahavenReal(data2, colors2), isSeahavenReal_soln(data2, colors2))
+isequal(isSeahavenReal(data3, colors3), isSeahavenReal_soln(data3, colors3))
+isequal(isSeahavenReal(data4, colors4), isSeahavenReal_soln(data4, colors4))
 % Test Cases:
 % [coeffs1] = isSeahavenReal(data1, colors1)
+% [coeffs1_soln] = isSeahavenReal_soln(data1, colors1)
 % 		Output variable(s) should be identical to that produced by the solution file
 % 		Output plot(s) should be identical to that produced by solution file
 % 
